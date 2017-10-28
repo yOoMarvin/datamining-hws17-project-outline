@@ -1,4 +1,7 @@
 # Project Outline Keypoints
+max 4 Pages including title page!!
+*Team names on title page
+*project name
 
 ## Problem solving
 The Production of a movie is very expensive and the success of a movie is not guaranteed. Thatswhy producing a movie is a big risk for all the investors. 
