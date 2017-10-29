@@ -21,14 +21,15 @@ In addition to the movie metadata, the cast and the crew of all contained movies
 
 \section{Methodology}
 
-The measurement of success will be based upon the created revenue of the movie. Since the revenue is a continuous attribute it will be binned into several bins/classes. The concept of binning allows to predict the expected range of revenue for a new movie.
+The measurement of success of a movie will be based upon the generated revenue. Since the revenue is a continuous attribute it will be binned into several bins/classes. The concept of binning allows to predict the expected range of revenue for a new movie.
 
-Since the metadata of the movies already contain 24 features and not all of them are relevant, irrelevant information is going to be discarded. In order to find out the most important features, an approach of different classifiers and set of features will be applied. Movies with missing features will be filtered out beforehand. 
+After selecting and preprocessing the data, the dataset will be split into two stratified datasets. One dataset containing 70\% of the data rows will be used to train the classifiers and tune hyperparameters (training set). The other data set containing 30\% of the data rows will evaluate the project at the end (test set). 
 
-For the best prediction, different classifiers will be used. Since Naive Bayes gives good results, despite the assumption of independence of the features, Naive Bayes will be taken as a baseline to compare the different classifiers.
+Since the metadata of the movies already contain 24 features and not all of them might be relevant, irrelevant information will be discarded. In order to find out the most important features, try and error of different classifiers and set of features will be applied. Movies with missing features will be filtered out beforehand. Naive guessing of the majority class will provide a baseline to be exceeded by each classifier in question.
 
-Furthermore, classifiers like k-NN, Decision Trees and Random forest will be used in this project work. For all classifiers, hyperparameter tuning will be performed, to receive the best possible results. Additionally, k-NN with k from 1 to 10 and Decision Trees with different depths and split techniques will be applied.
-To compare the results of the different classifiers, it is planned to run several success measurement techniques under ten times cross-validation on the training dataset and draw ROC curves.
+Classifiers like Naive Bayes, k-NN, Decision Trees and Random forest will be considered in this project. For all classifiers expecting hyperparameters, hyperparameter tuning will be performed using grid search. Examples of targeted hyperparameters are the number of neighbours and distance measures in k-NN and the depths and split measures of Decision Trees. More hyperparameters will be considered during the project work.
+
+It is planned to compare the average F1-score of the different classifiers under a stratified ten times cross-validation on the training dataset and draw the resulting ROC curves to show the performance of each classifier in a diagram.
 
 
 \section{Measurement of Success}
